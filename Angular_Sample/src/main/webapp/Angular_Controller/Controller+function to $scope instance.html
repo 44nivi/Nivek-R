@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+<body>
+<h1> Controller + Function to Scope </h1>
+<div ng-controller="DemoController">
+<p>{{fullName("Karuna","krishna")}}</p>
+</div>
+<script type="text/javascript">  
+var app = angular.module("DemoApp", []);
+app.controller("DemoController", function($scope) {
+   
+    $scope.fullName=function(firstName,lastname){
+return firstName + lastname;
+}
+} );
+</script>
+</body>
+</html>
