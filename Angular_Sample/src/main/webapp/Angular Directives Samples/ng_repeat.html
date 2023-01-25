@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"> </script>
+<body>
+	<form ng-app="DemoApp">
+
+	<div  ng-controller="DemoController">
+		<h1>Topics</h1>
+		<ul>
+			<li ng-repeat="tpname in TopicNames">{{tpname.name}}</li>
+		</ul>
+	</div></form>
+	
+<!-- ************you can write a separate js file or use script tag to write the js commands in Angular******** -->
+
+	<script>
+		var app = angular.module('DemoApp', []);
+		app.controller('DemoController', function($scope) {
+
+			$scope.TopicNames = [ {
+				name : "What controller do from Angular's perspective"
+			}, {
+				name : "Controller Methods"
+			}, {
+				name : "Building a basic controller"
+			} ];
+		});
+	</script>
+</body>
+</html>
